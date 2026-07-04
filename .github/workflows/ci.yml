@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go-version: ['1.24']
+        go-version: ['1.24', '1.25']
     steps:
       - uses: actions/checkout@v6
 
@@ -34,3 +34,21 @@ jobs:
 
       - name: Build
         run: go build -o mdtable ./cmd/mdtable
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: '1.25'
+
+      - name: Run gofmt
+        run: |
+          if [ -n "$(gofmt -l .)" ]; then
+            echo "Files not formatted with gofmt:"
+            gofmt -l .
+            exit 1
+          fi
