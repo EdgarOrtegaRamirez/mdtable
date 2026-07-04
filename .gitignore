@@ -1,5 +1,5 @@
 # Binaries
-mdtable
+./mdtable
 *.exe
 *.exe~
 *.dll
