@@ -11,7 +11,7 @@ func (t *Table) Render() string {
 		return ""
 	}
 
- widths := t.columnWidths()
+	widths := t.columnWidths()
 
 	var sb strings.Builder
 

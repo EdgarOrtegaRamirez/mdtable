@@ -10,17 +10,17 @@ import (
 
 // Stats holds statistical summary for a column.
 type Stats struct {
-	Column  string
-	Count   int
-	Min     string
-	Max     string
-	Sum     float64
-	Mean    float64
-	Median  float64
-	StdDev  float64
-	Unique  int
-	Empty   int
-	IsNum   bool
+	Column string
+	Count  int
+	Min    string
+	Max    string
+	Sum    float64
+	Mean   float64
+	Median float64
+	StdDev float64
+	Unique int
+	Empty  int
+	IsNum  bool
 }
 
 // ColumnStats computes statistics for a column.

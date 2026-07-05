@@ -9,10 +9,10 @@ import (
 type MergeMode int
 
 const (
-	MergeInner  MergeMode = iota // Only rows with matching keys in both tables
-	MergeLeft                    // All rows from left, matching from right
-	MergeRight                   // All rows from right, matching from left
-	MergeFull                    // All rows from both tables
+	MergeInner MergeMode = iota // Only rows with matching keys in both tables
+	MergeLeft                   // All rows from left, matching from right
+	MergeRight                  // All rows from right, matching from left
+	MergeFull                   // All rows from both tables
 )
 
 // Merge joins two tables by a key column.
